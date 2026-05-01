@@ -31,9 +31,14 @@ htmlcov/
 Thumbs.db
 
 # ETL generated outputs
-data/processed/
-data/rejected/
-data/reports/
+data/processed/*
+!data/processed/.gitkeep
+data/rejected/*
+!data/rejected/.gitkeep
+data/reports/*
+!data/reports/.gitkeep
+data/curated/*
+!data/curated/.gitkeep
 
 # Local scratch/output folders
 tmp_test_outputs/

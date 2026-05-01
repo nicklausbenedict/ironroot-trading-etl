@@ -15,14 +15,16 @@ class PipelineTests(unittest.TestCase):
         self.addCleanup(lambda: shutil.rmtree(base_dir, ignore_errors=True))
         processed_dir = base_dir / "processed"
         rejected_dir = base_dir / "rejected"
+        curated_dir = base_dir / "curated"
         reports_dir = base_dir / "reports"
-        for output_dir in (processed_dir, rejected_dir, reports_dir):
+        for output_dir in (processed_dir, rejected_dir, curated_dir, reports_dir):
             output_dir.mkdir(parents=True, exist_ok=True)
 
         result = run_pipeline(
             raw_dir=RAW_DIR,
             processed_dir=processed_dir,
             rejected_dir=rejected_dir,
+            curated_dir=curated_dir,
             reports_dir=reports_dir,
         )
 
@@ -32,6 +34,20 @@ class PipelineTests(unittest.TestCase):
                 self.assertEqual(summary["raw_rows"], summary["accepted_rows"] + summary["rejected_rows"])
                 self.assertTrue((processed_dir / f"{table_name}.csv").exists())
                 self.assertTrue((rejected_dir / f"{table_name}_rejected.csv").exists())
+
+        expected_curated_tables = {
+            "dim_store",
+            "dim_product",
+            "dim_customer",
+            "dim_supplier",
+            "fact_sales",
+            "fact_inventory_snapshot",
+            "fact_purchase_order",
+        }
+        self.assertEqual(expected_curated_tables, set(result.curated))
+        for table_name in expected_curated_tables:
+            with self.subTest(curated_table=table_name):
+                self.assertTrue((curated_dir / f"{table_name}.csv").exists())
 
         report_path = reports_dir / "validation_summary.json"
         self.assertTrue(report_path.exists())

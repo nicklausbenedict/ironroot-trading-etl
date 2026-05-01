@@ -44,4 +44,5 @@ class ValidationResult:
 class PipelineResult:
     accepted: dict[str, pd.DataFrame]
     rejected: dict[str, pd.DataFrame]
+    curated: dict[str, pd.DataFrame]
     summary: dict[str, Any]

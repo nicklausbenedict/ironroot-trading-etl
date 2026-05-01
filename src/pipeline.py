@@ -7,14 +7,16 @@ from typing import Any
 
 try:
     from .clean import clean_all_tables
-    from .config import PROCESSED_DIR, RAW_DIR, REJECTED_DIR, REPORTS_DIR
+    from .config import CURATED_DIR, PROCESSED_DIR, RAW_DIR, REJECTED_DIR, REPORTS_DIR
+    from .curate import build_curated_tables
     from .extract import load_all_tables
     from .models import PipelineResult
     from .validate import validate_all_tables
     from .write import write_outputs
 except ImportError:  # pragma: no cover - supports `python src/pipeline.py`
     from clean import clean_all_tables
-    from config import PROCESSED_DIR, RAW_DIR, REJECTED_DIR, REPORTS_DIR
+    from config import CURATED_DIR, PROCESSED_DIR, RAW_DIR, REJECTED_DIR, REPORTS_DIR
+    from curate import build_curated_tables
     from extract import load_all_tables
     from models import PipelineResult
     from validate import validate_all_tables
@@ -25,6 +27,7 @@ def run_pipeline(
     raw_dir: Path = RAW_DIR,
     processed_dir: Path = PROCESSED_DIR,
     rejected_dir: Path = REJECTED_DIR,
+    curated_dir: Path = CURATED_DIR,
     reports_dir: Path = REPORTS_DIR,
     write_files: bool = True,
 ) -> PipelineResult:
@@ -32,19 +35,27 @@ def run_pipeline(
     raw_tables = load_all_tables(raw_dir=raw_dir, ingested_at=ingested_at)
     cleaned_tables = clean_all_tables(raw_tables)
     validation = validate_all_tables(cleaned_tables)
+    curated_tables = build_curated_tables(validation.accepted)
     summary = build_summary(raw_tables, validation.accepted, validation.rejected, validation.issue_counts, ingested_at)
 
     if write_files:
         write_outputs(
             validation.accepted,
             validation.rejected,
+            curated_tables,
             summary,
             processed_dir=processed_dir,
             rejected_dir=rejected_dir,
+            curated_dir=curated_dir,
             reports_dir=reports_dir,
         )
 
-    return PipelineResult(accepted=validation.accepted, rejected=validation.rejected, summary=summary)
+    return PipelineResult(
+        accepted=validation.accepted,
+        rejected=validation.rejected,
+        curated=curated_tables,
+        summary=summary,
+    )
 
 
 def build_summary(
@@ -89,6 +100,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--raw-dir", type=Path, default=RAW_DIR)
     parser.add_argument("--processed-dir", type=Path, default=PROCESSED_DIR)
     parser.add_argument("--rejected-dir", type=Path, default=REJECTED_DIR)
+    parser.add_argument("--curated-dir", type=Path, default=CURATED_DIR)
     parser.add_argument("--reports-dir", type=Path, default=REPORTS_DIR)
     return parser.parse_args()
 
@@ -99,6 +111,7 @@ def main() -> None:
         raw_dir=args.raw_dir,
         processed_dir=args.processed_dir,
         rejected_dir=args.rejected_dir,
+        curated_dir=args.curated_dir,
         reports_dir=args.reports_dir,
     )
     totals = result.summary["totals"]

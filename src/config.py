@@ -14,6 +14,7 @@ RAW_DIR = DATA_DIR / "raw"
 PROCESSED_DIR = DATA_DIR / "processed"
 REJECTED_DIR = DATA_DIR / "rejected"
 REPORTS_DIR = DATA_DIR / "reports"
+CURATED_DIR = DATA_DIR / "curated"
 
 AUDIT_COLUMNS = ("_source_file", "_source_row_number", "_ingested_at")
 VALIDATION_STATUS_COLUMN = "_validation_status"
