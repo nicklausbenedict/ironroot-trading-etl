@@ -1,0 +1,11 @@
+SupplierId,SupplierName,Region,Specialty,ReliabilityScore
+SUP001,Stormwind Alchemists Guild,Eastern Kingdoms,Potions,0.95
+SUP002,Thunder Bluff Provisions,Kalimdor,Food,0.88
+SUP003,Dalaran Enchanters Circle,Northrend,Reagents,0.92
+SUP004,Blackrock Toolworks,Eastern Kingdoms,Tools,0.71
+SUP005,Shattrath Caravan Consortium,Outland,Travel,0.84
+SUP006,Gadgetzan Engineering Syndicate,Kalimdor,Engineering,0.78
+SUP007,Argent Medical Quartermasters,Northrend,Medical,0.9
+SUP008,Suramar Artisan Exchange,Broken Isles,Crafting,0.81
+SUP009,Ironforge Mountwrights,Eastern Kingdoms,Mount Supply,0.86
+SUP010,Darkmoon Curio Brokers,Kalimdor,Novelty,0.69

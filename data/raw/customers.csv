@@ -1,0 +1,151 @@
+CustomerId,CustomerName,CharacterClass,Level,Faction,HomeRegion
+C001,Sarella36,Rogue,22,Horde,Eastern Kingdoms
+C002,Vexa95,Druid,13,Alliance,Eastern Kingdoms
+C003,Thalren12,Rogue,22,Horde,Eastern Kingdoms
+C004,Kaela26,Death Knight,49,Horde,Eastern Kingdoms
+C005,Velkan58,Monk,25,Horde,Outland
+C006,Jorvik21,Death Knight,35,Horde,Eastern Kingdoms
+C007,Nerra98,Shaman,14,Alliance,Kalimdor
+C008,Brindle45,Monk,24,Alliance,Eastern Kingdoms
+C009,Kaela16,Mage,13,Horde,Outland
+C010,Orlanna47,Monk,20,Horde,Broken Isles
+C011,Vexa30,Priest,13,Horde,Eastern Kingdoms
+C012,Mira36,Warlock,48,Neutral,Eastern Kingdoms
+C013,Brindle46,Rogue,50,Horde,Kalimdor
+C014,Sivra82,Hunter,42,Alliance,Eastern Kingdoms
+C015,Eldric49,Priest,67,Horde,Kalimdor
+C016,Velkan88,Shaman,61,Horde,Broken Isles
+C017,Velkan5,Shaman,33,Horde,Eastern Kingdoms
+C018,Rukgar92,Shaman,21,Alliance,Kalimdor
+C019,Aldren59,Hunter,24,Horde,Outland
+C020,Kaela34,Death Knight,45,Alliance,Broken Isles
+C021,Mira47,Rogue,16,Horde,Broken Isles
+C022,Jorvik7,Paladin,17,Horde,Eastern Kingdoms
+C023,Sivra9,Mage,32,Horde,Outland
+C024,Fenwick33,Druid,63,Horde,Outland
+C025,Vexa69,Priest,57,Neutral,Eastern Kingdoms
+C026,Korvash56,Hunter,37,Horde,Eastern Kingdoms
+C027,Fenwick98,Hunter,40,Alliance,Northrend
+C028,Keth82,Druid,46,Neutral,Northrend
+C029,Jorvik21,Druid,69,Alliance,Northrend
+C030,Thalren77,Shaman,39,Horde,Broken Isles
+C031,Keth40,Rogue,11,Alliance,Northrend
+C032,Zarvok11,Death Knight,39,Alliance,Broken Isles
+C033,Jorvik17,Hunter,50,Horde,Broken Isles
+C034,Brok34,Druid,63,Horde,Broken Isles
+C035,Kaela97,Death Knight,52,Horde,Kalimdor
+C036,Mira86,Demon Hunter,31,Alliance,Northrend
+C037,Eldric16,Rogue,22,Horde,Broken Isles
+C038,Rukgar71,Rogue,45,Alliance,Eastern Kingdoms
+C039,Morgrim81,Warrior,22,Alliance,Eastern Kingdoms
+C040,Orlanna43,Paladin,40,Alliance,Eastern Kingdoms
+C041,Nerra70,Hunter,54,Alliance,Outland
+C042,Rukgar61,Rogue,58,Neutral,Broken Isles
+C043,Nerra13,Paladin,50,Horde,Outland
+C044,Dorn60,Death Knight,11,Horde,Outland
+C045,Moongraze52,Death Knight,29,Horde,Eastern Kingdoms
+C046,Velkan25,Rogue,42,Horde,Eastern Kingdoms
+C047,Brok36,Warlock,23,Horde,Outland
+C048,Eldric71,Paladin,11,Neutral,Eastern Kingdoms
+C049,Keth2,Paladin,67,Horde,Broken Isles
+C050,Brok53,Warlock,38,Horde,Kalimdor
+C051,Moongraze22,Mage,8,Alliance,Outland
+C052,Tamsin59,Priest,35,Neutral,Northrend
+C053,Vexa92,Warlock,17,Horde,Broken Isles
+C054,Moongraze75,Death Knight,42,Alliance,Kalimdor
+C055,Moongraze7,Monk,38,Alliance,Northrend
+C056,Brok8,Druid,13,Horde,Broken Isles
+C057,Sivra9,Demon Hunter,63,Neutral,Eastern Kingdoms
+C058,Rukgar32,Monk,46,Alliance,Eastern Kingdoms
+C059,Dorn85,Monk,44,Alliance,Eastern Kingdoms
+C060,Nerra86,Death Knight,28,Horde,Northrend
+C061,Aelwyn86,Demon Hunter,27,Alliance,Outland
+C062,Thalren59,Monk,44,Horde,Eastern Kingdoms
+C063,Kaela28,Druid,24,Neutral,Eastern Kingdoms
+C064,Zarvok32,Shaman,26,Alliance,Northrend
+C065,Morgrim39,Monk,70,Alliance,Broken Isles
+C066,Thalren86,Druid,27,Neutral,Broken Isles
+C067,Aelwyn34,Paladin,64,Neutral,Eastern Kingdoms
+C068,Aelwyn35,Priest,46,Alliance,Broken Isles
+C069,Nerra88,Demon Hunter,62,Alliance,Northrend
+C070,Tavia7,Paladin,48,Alliance,Outland
+C071,Moongraze1,Shaman,57,Horde,Northrend
+C072,Brok95,Warlock,43,Alliance,Northrend
+C073,Thalren15,Paladin,68,Horde,Broken Isles
+C074,Kaela5,Shaman,45,Neutral,Kalimdor
+C075,Aelwyn6,Priest,31,Horde,Outland
+C076,Brindle27,Demon Hunter,23,Neutral,Eastern Kingdoms
+C077,Jorvik72,Mage,70,Horde,Northrend
+C078,Velkan21,Hunter,64,Horde,Kalimdor
+C079,Sarella43,Mage,59,Alliance,Kalimdor
+C080,Tavia21,Death Knight,14,Horde,Kalimdor
+C081,Orlanna61,Rogue,20,Alliance,Eastern Kingdoms
+C082,Brindle40,Rogue,22,Horde,Outland
+C083,Mira43,Priest,63,Alliance,Kalimdor
+C084,Brindle83,Druid,33,Alliance,Northrend
+C085,Lunara4,Paladin,64,Horde,Broken Isles
+C086,Rukgar34,Warrior,14,Neutral,Kalimdor
+C087,Sarella41,Mage,46,Horde,Northrend
+C088,Mira74,Rogue,24,Neutral,Eastern Kingdoms
+C089,Thalren67,Druid,51,Alliance,Outland
+C090,Brindle56,Paladin,68,Horde,Kalimdor
+C091,Sivra41,Demon Hunter,62,Horde,Northrend
+C092,Fenwick40,Demon Hunter,34,Alliance,Northrend
+C093,Kaela17,Rogue,34,Alliance,Northrend
+C094,Vexa96,Hunter,47,Horde,Outland
+C095,Kaela1,Priest,26,Horde,Outland
+C096,Sivra84,Shaman,37,Alliance,Broken Isles
+C097,Fenwick61,Death Knight,18,Horde,Kalimdor
+C098,Fenwick85,Demon Hunter,47,Horde,Northrend
+C099,Vexa40,Rogue,59,Alliance,Kalimdor
+C100,Moongraze32,Warlock,47,Alliance,Eastern Kingdoms
+C101,Eldric54,Demon Hunter,44,Neutral,Eastern Kingdoms
+C102,Nyxra52,Rogue,17,Alliance,Outland
+C103,Jorvik99,Paladin,57,Horde,Eastern Kingdoms
+C104,Tamsin90,Druid,37,Horde,Kalimdor
+C105,Orlanna16,Warlock,16,Alliance,Kalimdor
+C106,Kaela77,Shaman,68,Horde,Broken Isles
+C107,Sivra93,Druid,35,Horde,Outland
+C108,Eldric21,Death Knight,63,Horde,Broken Isles
+C109,Jorvik32,Demon Hunter,25,Horde,Northrend
+C110,Nyxra81,Rogue,25,Horde,Broken Isles
+C111,Velkan35,Shaman,28,Horde,Northrend
+C112,Aelwyn20,Rogue,32,Neutral,Eastern Kingdoms
+C113,Zarvok54,Mage,29,Horde,Kalimdor
+C114,Moongraze27,Mage,32,Horde,Outland
+C115,Morgrim3,Monk,32,Neutral,Broken Isles
+C116,Korvash97,Mage,62,Horde,Northrend
+C117,Kaela96,Death Knight,42,Neutral,Outland
+C118,Nyxra29,Priest,35,Horde,Kalimdor
+C119,Lunara86,Demon Hunter,59,Horde,Outland
+C120,Keth60,Hunter,70,Alliance,Kalimdor
+C121,Mira76,Monk,50,Horde,Eastern Kingdoms
+C122,Aelwyn60,Hunter,11,Alliance,Outland
+C123,Nerra59,Shaman,29,Alliance,Northrend
+C124,Tavia97,Mage,24,Horde,Outland
+C125,Thalren96,Druid,11,Horde,Outland
+C126,Velkan84,Paladin,57,Neutral,Northrend
+C127,Jorvik4,Rogue,20,Neutral,Eastern Kingdoms
+C128,Aelwyn31,Hunter,38,Horde,Broken Isles
+C129,Nerra60,Death Knight,24,Horde,Broken Isles
+C130,Sivra78,Death Knight,53,Horde,Kalimdor
+C131,Korvash14,Monk,9,Alliance,Kalimdor
+C132,Vexa49,Mage,68,Neutral,Broken Isles
+C133,Rukgar89,Demon Hunter,23,Horde,Eastern Kingdoms
+C134,Orlanna88,Monk,59,Alliance,Northrend
+C135,Tamsin6,Shaman,42,Alliance,Broken Isles
+C136,Zarvok65,Demon Hunter,29,Horde,Northrend
+C137,Keth63,Paladin,35,Alliance,Outland
+C138,Morgrim20,Mage,19,Neutral,Outland
+C139,Sivra69,Warlock,37,Horde,Northrend
+C140,Tavia42,Rogue,61,Horde,Broken Isles
+C141,Eldric32,Warlock,44,Neutral,Northrend
+C142,Lunara4,Warlock,62,Horde,Outland
+C143,Nerra46,Priest,29,Alliance,Outland
+C144,Morgrim36,Druid,8,Alliance,Broken Isles
+C145,Zarvok31,Death Knight,34,Horde,Kalimdor
+C146,Morgrim61,Demon Hunter,53,Horde,Kalimdor
+C147,Zarvok38,Rogue,33,Horde,Eastern Kingdoms
+C148,Vexa75,Shaman,38,Horde,Northrend
+C149,Dorn96,Druid,29,Horde,Northrend
+C150,Tavia40,Priest,22,Alliance,Outland

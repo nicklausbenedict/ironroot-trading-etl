@@ -1,0 +1,61 @@
+ProductId,ProductName,Category,Rarity,BasePriceGold,IsPerishable
+P001,Lesser Healing Potion,Potion,Common,2.5,true
+P002,Greater Healing Potion,Potion,Uncommon,8.75,true
+P003,Lesser Mana Potion,Potion,Common,2.75,true
+P004,Arcane Dust Pouch,Reagent,Uncommon,12.75,false
+P005,Roasted Boar Haunch,Food,Common,3.0,true
+P006,Heavy Linen Bandage,Medical,Common,1.25,false
+P007,Enchanted Smithing Hammer,Tool,Rare,85.0,false
+P008,Adventurer Repair Kit,Repair,Common,6.5,false
+P009,Fine Leather Waterskin,Travel,Common,4.25,false
+P010,Goblin Jumper Cables,Engineering,Rare,72.0,false
+P011,Silverleaf Bundle,Herb,Common,1.8,true
+P012,Peacebloom Sachet,Herb,Common,1.65,true
+P013,Kingsblood Bundle,Herb,Uncommon,5.5,true
+P014,Iron Ore Crate,Ore,Common,7.25,false
+P015,Mithril Ore Crate,Ore,Uncommon,18.5,false
+P016,Thorium Ore Crate,Ore,Rare,42.0,false
+P017,Coarse Thread Spool,Crafting,Common,0.75,false
+P018,Runecloth Bolt,Crafting,Uncommon,9.5,false
+P019,Arcane Crystal Shard,Reagent,Epic,130.0,false
+P020,Simple Fishing Pole,Tool,Common,5.0,false
+P021,Weathered Pickaxe,Tool,Common,9.75,false
+P022,Traveler Backpack,Travel,Uncommon,24.0,false
+P023,Dwarven Camping Stove,Travel,Rare,58.0,false
+P024,Spiced Wolf Jerky,Food,Common,2.25,true
+P025,Conjured Sweetroll,Food,Uncommon,4.75,true
+P026,Frostwoven Blanket,Travel,Uncommon,16.5,false
+P027,Minor Agility Elixir,Potion,Uncommon,11.0,true
+P028,Elixir of Fortitude,Potion,Uncommon,13.25,true
+P029,Flask of the Titans,Potion,Epic,210.0,true
+P030,Bright Camp Lantern,Travel,Common,8.0,false
+P031,Polished Dragon Scale,Reagent,Rare,66.0,false
+P032,Mooncloth Satchel,Crafting,Rare,95.0,false
+P033,Fel Iron Rod,Enchanting,Uncommon,33.0,false
+P034,Enchanted Vellum Stack,Enchanting,Common,6.75,false
+P035,Stable Feed Sack,Mount Supply,Common,3.6,true
+P036,Swiftwind Horseshoes,Mount Supply,Rare,120.0,false
+P037,Wyvern Grooming Brush,Mount Supply,Uncommon,15.0,false
+P038,Basic Lockpick Set,Tool,Uncommon,21.0,false
+P039,Shiny Red Apple,Food,Common,0.8,true
+P040,Hearthstone Polish,Novelty,Common,4.0,false
+P041,Portable Anvil Token,Tool,Epic,275.0,false
+P042,Blacksmith Coal Bag,Crafting,Common,3.9,false
+P043,Goblin Rocket Grease,Engineering,Uncommon,17.25,false
+P044,Gnomish Scope Lens,Engineering,Rare,88.0,false
+P045,Troll Mojo Charm,Reagent,Uncommon,14.0,false
+P046,Elemental Fire Vial,Reagent,Rare,52.0,false
+P047,Elemental Water Flask,Reagent,Rare,48.0,false
+P048,Blessed Candle Pack,Religious,Common,2.1,false
+P049,Paladin Seal Wax,Religious,Uncommon,9.25,false
+P050,Shadow Oil Bottle,Potion,Rare,37.0,true
+P051,Sturdy Rope Coil,Travel,Common,5.25,false
+P052,Map of Forgotten Roads,Travel,Uncommon,12.0,false
+P053,Ironbark Shield Polish,Repair,Uncommon,10.5,false
+P054,Field Stitching Kit,Medical,Common,3.4,false
+P055,Anti-Venom Tonic,Medical,Uncommon,7.8,true
+P056,Small Pet Biscuit,Pet Supply,Common,1.2,true
+P057,Clockwork Squirrel Gear,Pet Supply,Rare,64.0,false
+P058,Darkmoon Prize Ticket,Novelty,Uncommon,19.0,false
+P059,Gilded Hearth Mug,Novelty,Common,6.25,false
+P060,Ancient Runestone,Reagent,Epic,185.0,false

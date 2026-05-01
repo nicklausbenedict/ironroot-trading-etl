@@ -1,0 +1,13 @@
+StoreId,StoreName,Region,Zone,FactionAlignment
+S001,Ironroot Trading Co.,Eastern Kingdoms,Elwynn Forest,Alliance
+S002,Grimtotem Supply Depot,Kalimdor,Mulgore,Horde
+S003,Neutral Lantern Goods,Northrend,Dalaran,Neutral
+S004,Gilded Gryphon Provisions,Eastern Kingdoms,Stormwind City,Alliance
+S005,Redridge Roadside Wares,Eastern Kingdoms,Redridge Mountains,Alliance
+S006,Durotar Pack & Tack,Kalimdor,Durotar,Horde
+S007,Shattrath Sundries,Outland,Shattrath,Neutral
+S008,Nagrand Trail Market,Outland,Nagrand,Neutral
+S009,Suramar Moonlit Goods,Broken Isles,Suramar,Neutral
+S010,Thunder Bluff Provisions,Kalimdor,Mulgore,Horde
+S011,Dun Morogh Coldweather Supply,Eastern Kingdoms,Dun Morogh,Alliance
+S012,Tanaris Caravan Exchange,Kalimdor,Tanaris,Neutral
