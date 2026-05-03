@@ -4,6 +4,8 @@ Ironroot Trading ETL is a Python practice project for building a custom CSV-base
 
 The project reads raw CSV files from `data/raw`, cleans and validates the records, separates accepted and rejected rows, writes validation reports, and generates curated dimension/fact CSVs for downstream analytics.
 
+By default, the pipeline reads raw CSVs from the local project directory. It can also stream the same raw CSV files from an existing S3 bucket when run with `--source s3`.
+
 ## Project Layout
 
 ```text
@@ -13,7 +15,7 @@ data/raw/            Committed sample source CSVs
 data/processed/      Generated accepted cleaned CSVs
 data/rejected/       Generated rejected CSVs with validation reasons
 data/reports/        Generated validation reports
-data/curated/        Generated dimension/fact CSVs
+data/curated/        Generated dimension/fact CSV and Parquet files
 ```
 
 The generated data folders are committed with `.gitkeep` placeholders, but their generated CSV/report contents are ignored by Git.
@@ -38,6 +40,8 @@ Run the ETL pipeline:
 .\.venv\Scripts\python.exe -m src.pipeline
 ```
 
+To configure S3 sourcing later, copy `.env.example` to `.env` and fill in your bucket settings. `.env` is ignored by Git.
+
 Run the unit tests:
 
 ```powershell
@@ -52,10 +56,34 @@ Run the pipeline with default directories:
 .\.venv\Scripts\python.exe -m src.pipeline
 ```
 
+Run the pipeline from S3:
+
+```powershell
+.\.venv\Scripts\python.exe -m src.pipeline --source s3
+```
+
+Run the pipeline and upload curated CSV and Parquet files to S3:
+
+```powershell
+.\.venv\Scripts\python.exe -m src.pipeline --upload-curated
+```
+
+Run the pipeline from S3 and upload curated CSV and Parquet files back to S3:
+
+```powershell
+.\.venv\Scripts\python.exe -m src.pipeline --source s3 --upload-curated
+```
+
 Run the pipeline with explicit output directories:
 
 ```powershell
 .\.venv\Scripts\python.exe -m src.pipeline --processed-dir data\processed --rejected-dir data\rejected --curated-dir data\curated --reports-dir data\reports
+```
+
+Run the pipeline from S3 with explicit output directories:
+
+```powershell
+.\.venv\Scripts\python.exe -m src.pipeline --source s3 --processed-dir data\processed --rejected-dir data\rejected --curated-dir data\curated --reports-dir data\reports
 ```
 
 Show pipeline command options:
@@ -84,7 +112,8 @@ Running the pipeline writes:
 data/processed/*.csv
 data/rejected/*_rejected.csv
 data/reports/validation_summary.json
-data/curated/*.csv
+data/curated/csv/*.csv
+data/curated/parquet/*.parquet
 ```
 
 Curated outputs include:
@@ -99,6 +128,49 @@ fact_inventory_snapshot.csv
 fact_purchase_order.csv
 ```
 
+## S3 Source Configuration
+
+S3 mode expects the bucket to contain the same raw CSV filenames used in `data/raw`:
+
+```text
+stores.csv
+products.csv
+customers.csv
+sales.csv
+inventory.csv
+suppliers.csv
+purchase_orders.csv
+```
+
+Configure local S3 settings in `.env`:
+
+```env
+S3_BUCKET=your-bucket-name
+S3_RAW_PREFIX=optional/prefix/
+S3_CURATED_CSV_PREFIX=curated/csv/
+S3_CURATED_PARQUET_PREFIX=curated/parquet/
+AWS_PROFILE=optional-profile-name
+```
+
+If `S3_RAW_PREFIX=raw/`, the pipeline reads keys like `raw/stores.csv` and `raw/sales.csv`.
+
+When `--upload-curated` is used, curated files are uploaded under timestamped run folders:
+
+```text
+curated/csv/YYYYMMDDTHHMMSSZ/*.csv
+curated/parquet/YYYYMMDDTHHMMSSZ/*.parquet
+```
+
+After all expected curated CSV and Parquet files are uploaded and verified, the pipeline writes:
+
+```text
+curated/latest_manifest.json
+```
+
 ## Notes
+
+`.env` is local-only and used for optional S3 source configuration.
+
+`.venv/`, `.env`, Python caches, and generated pipeline outputs are ignored by Git.
 
 `data/raw/` is committed because the tests and examples depend on the sample source data. Additional dataset details live in `data/README.md`.

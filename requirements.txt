@@ -1,2 +1,6 @@
 numpy==2.4.4
 pandas==3.0.2
+pyarrow
+boto3
+botocore[crt]
+python-dotenv

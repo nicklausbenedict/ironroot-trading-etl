@@ -1,6 +1,7 @@
 # Environment and secrets
 .env
 .env.*
+!.env.example
 
 # Python bytecode/cache
 __pycache__/
@@ -37,7 +38,12 @@ data/rejected/*
 !data/rejected/.gitkeep
 data/reports/*
 !data/reports/.gitkeep
-data/curated/*
+data/curated/*.csv
+data/curated/*.parquet
+data/curated/csv/*
+!data/curated/csv/.gitkeep
+data/curated/parquet/*
+!data/curated/parquet/.gitkeep
 !data/curated/.gitkeep
 
 # Local scratch/output folders

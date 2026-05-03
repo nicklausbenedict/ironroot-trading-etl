@@ -43,7 +43,11 @@ def write_curated_outputs(
     curated: dict[str, pd.DataFrame],
     curated_dir: Path = CURATED_DIR,
 ) -> None:
-    curated_dir.mkdir(parents=True, exist_ok=True)
+    csv_dir = curated_dir / "csv"
+    parquet_dir = curated_dir / "parquet"
+    csv_dir.mkdir(parents=True, exist_ok=True)
+    parquet_dir.mkdir(parents=True, exist_ok=True)
 
     for table_name, df in curated.items():
-        df.to_csv(curated_dir / f"{table_name}.csv", index=False)
+        df.to_csv(csv_dir / f"{table_name}.csv", index=False)
+        df.to_parquet(parquet_dir / f"{table_name}.parquet", index=False, engine="pyarrow")
