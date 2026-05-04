@@ -1,6 +1,6 @@
 # Ironroot Trading Co. Raw CSV Dataset
 
-Fictional fantasy general goods dataset for practicing Python ETL, cloud object storage, validation, dimensional modeling, and SQL loading.
+Fictional fantasy general goods dataset for practicing Python ETL, cloud object storage, validation, dimensional modeling, and SQL loading. The records are synthetic and are not based on real customers, stores, suppliers, or transactions.
 
 Files:
 - stores.csv

@@ -173,4 +173,8 @@ curated/latest_manifest.json
 
 `.venv/`, `.env`, Python caches, and generated pipeline outputs are ignored by Git.
 
-`data/raw/` is committed because the tests and examples depend on the sample source data. Additional dataset details live in `data/README.md`.
+`data/raw/` is committed because the tests and examples depend on the sample source data. The dataset is fictional and intended for ETL practice. Additional dataset details live in `data/README.md`.
+
+## License
+
+This project is licensed under the MIT License. See `LICENSE` for details.
