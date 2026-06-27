@@ -10,6 +10,7 @@ By default, the pipeline reads raw CSVs from the local project directory. It can
 
 ```text
 src/                 Pipeline source code
+glue/                AWS Glue entrypoint script
 tests/               Unit tests
 data/raw/            Committed sample source CSVs
 data/processed/      Generated accepted cleaned CSVs
@@ -104,6 +105,13 @@ Run one test module:
 .\.venv\Scripts\python.exe -m unittest tests.test_curate
 ```
 
+Package the project code for AWS Glue:
+
+```powershell
+New-Item -ItemType Directory -Force build
+Compress-Archive -Path src -DestinationPath build\ironroot_etl_src.zip -Force
+```
+
 ## Outputs
 
 Running the pipeline writes:
@@ -166,6 +174,40 @@ After all expected curated CSV and Parquet files are uploaded and verified, the 
 ```text
 curated/latest_manifest.json
 ```
+
+## AWS Glue Deployment
+
+The Glue integration keeps the project code modular. Upload the thin entrypoint script and a zipped copy of `src/` to S3:
+
+```text
+s3://your-bucket-name/glue/scripts/ironroot_glue_job.py
+s3://your-bucket-name/glue/packages/ironroot_etl_src.zip
+```
+
+Create an AWS Glue Spark job with Glue 5.1, Python 3, and this script path:
+
+```text
+s3://your-bucket-name/glue/scripts/ironroot_glue_job.py
+```
+
+Configure these job parameters:
+
+```text
+--extra-py-files=s3://your-bucket-name/glue/packages/ironroot_etl_src.zip
+--S3_BUCKET=your-bucket-name
+--S3_RAW_PREFIX=raw/
+--S3_CURATED_CSV_PREFIX=curated/csv/
+--S3_CURATED_PARQUET_PREFIX=curated/parquet/
+```
+
+Configure dependencies with a requirements file in S3:
+
+```text
+--python-modules-installer-option=-r
+--additional-python-modules=s3://your-bucket-name/glue/requirements/requirements.txt
+```
+
+The Glue job does not use `.env` or `AWS_PROFILE`. It should use the IAM role attached to the Glue job for S3 and CloudWatch Logs access.
 
 ## Notes
 

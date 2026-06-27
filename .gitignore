@@ -20,6 +20,7 @@ ENV/
 .ruff_cache/
 .coverage
 htmlcov/
+build/
 
 # IDE/editor files
 .vscode/
