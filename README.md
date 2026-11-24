@@ -171,8 +171,6 @@ curated/latest_manifest.json
 
 `.env` is local-only and used for optional S3 source configuration.
 
-`.venv/`, `.env`, Python caches, and generated pipeline outputs are ignored by Git.
-
 `data/raw/` is committed because the tests and examples depend on the sample source data. The dataset is fictional and intended for ETL practice. Additional dataset details live in `data/README.md`.
 
 ## License
